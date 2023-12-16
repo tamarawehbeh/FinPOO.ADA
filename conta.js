@@ -33,6 +33,20 @@ function criarConta(event) {
     const email = prompt("Digite seu email: ")
     const cpf = prompt("Digite seu cpf: ")
     numeroConta++
+
+    if (!nome){
+        alert("O campo nome é obrigatório!")
+        return
+    }
+    if (!email){
+        alert("O campo email é obrigatório!")
+        return
+    }
+    if (!cpf){
+        alert("O campo cpf é obrigatório!")
+        return
+    }
+
     const pessoa1 = new Cliente(nome, email, cpf)
     const conta1 = new Conta(pessoa1, 0, numeroConta);
     contas.push(conta1)
